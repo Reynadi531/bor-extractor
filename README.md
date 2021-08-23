@@ -4,7 +4,7 @@ BOR (Bed Occupancy Rate) Extractor from PDF table to csv file
 
 - To build the docker file use:
     ```bash
-    docker buld -t . <image name>
+    docker buld . -t <image name>
     ```
 - To run it:
   ```
