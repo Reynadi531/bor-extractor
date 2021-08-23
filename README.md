@@ -8,6 +8,7 @@ BOR (Bed Occupancy Rate) Extractor from PDF table to csv file
     ```
 - To run it:
   ```
+  docker pull reynadi17/bor-extractor
   docker run <imagename> -v path:/app/tables
   ```
 
