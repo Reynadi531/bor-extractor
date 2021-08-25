@@ -47,7 +47,7 @@ class Extarctor:
 
         if int(datenow) > 31 or int(datenow) == 0: raise ValueError("Invalid date")
         if int(monthnow) > 12 or int(monthnow) == 0: raise ValueError("Invalid month")
-        if int(yearnow) < 2020 : raise ValueError("Invalid year")
+        if int(yearnow) < 2020 or int(monthnow) == 0 : raise ValueError("Invalid year")
 
         bulan = {
             "01": "Januari",
