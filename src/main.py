@@ -28,7 +28,7 @@ class Extarctor:
 
     def downloader(self):
         datenow = self.dateparser()
-        self.filename = f"BOR-RS-{date}.pdf"
+        self.filename = f"BOR-RS-{datenow}.pdf"
         url = f"https://www.kemkes.go.id/downloads/resources/download/Ketersediaan-Tempat-Tidur-RS-Covid19/{self.filename}"
         r = requests.get(url)
         if not r.headers["content-type"] == "application/pdf":
@@ -41,9 +41,13 @@ class Extarctor:
         
     def dateparser(self):
         today = date.today()
-        datenow = today.strftime("%d")
-        monthnow = today.strftime("%m")
-        yearnow = today.strftime("%Y")
+        datenow = today.strftime("%d") if  "DATE" not in os.environ or len(os.environ["DATE"]) == 0 else os.environ["DATE"].zfill(2)
+        monthnow = today.strftime("%m") if "MONTH" not in os.environ or len(os.environ["MONTH"]) == 0 else os.environ["MONTH"].zfill(2)
+        yearnow = today.strftime("%Y") if "YEAR" not in os.environ or len(os.environ["YEAR"]) == 0 else os.environ["YEAR"]
+
+        if int(datenow) > 31 or int(datenow) == 0: raise ValueError("Invalid date")
+        if int(monthnow) > 12 or int(monthnow) == 0: raise ValueError("Invalid month")
+        if int(yearnow) < 2020 : raise ValueError("Invalid year")
 
         bulan = {
             "01": "Januari",
