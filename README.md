@@ -7,9 +7,8 @@ BOR (Bed Occupancy Rate) Extractor from PDF table to csv file
     docker build . -t <image name>
     ```
 - To run it:
-  ```
-  docker pull reynadi17/bor-extractor
-  docker run --rm -v $PWD/tables:/app/tables reynadi17/bor-extractor
+  ```bash
+  docker run --rm -v $PWD/tables:/app/tables <image name>
   ```
 
 - Variable that could be passed
@@ -20,7 +19,7 @@ BOR (Bed Occupancy Rate) Extractor from PDF table to csv file
   docker run --rm \
    -v $PWD/tables:/app/tables \
    -e "DATE=24" \
-   reynadi17/bor-extractor
+   <image name>
   ```
 
 ### Data source
