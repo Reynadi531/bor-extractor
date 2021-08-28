@@ -25,3 +25,9 @@ BOR (Bed Occupancy Rate) Extractor from PDF table to csv file
 
 ### Data source
 > https://www.kemkes.go.id/downloads/resources/download/Ketersediaan-Tempat-Tidur-RS-Covid19/
+
+## License
+
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
+**[MIT license](http://opensource.org/licenses/mit-license.php)**
