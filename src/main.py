@@ -4,7 +4,7 @@ from datetime import date
 import requests
 
 
-class Extarctor:
+class Extractor:
     def __init__(self):
         self.extractor()
 
@@ -69,4 +69,4 @@ class Extarctor:
         return parseddate
 
 if __name__ == "__main__":
-    Extarctor()
+    Extractor()
