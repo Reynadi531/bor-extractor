@@ -4,12 +4,11 @@ BOR (Bed Occupancy Rate) Extractor from PDF table to csv file
 
 - To build the docker file use:
     ```bash
-    docker buld . -t <image name>
+    docker build . -t <image name>
     ```
 - To run it:
-  ```
-  docker pull reynadi17/bor-extractor
-  docker run --rm -v $PWD/tables:/app/tables reynadi17/bor-extractor
+  ```bash
+  docker run --rm -v $PWD/tables:/app/tables <image name>
   ```
 
 - Variable that could be passed
@@ -20,8 +19,14 @@ BOR (Bed Occupancy Rate) Extractor from PDF table to csv file
   docker run --rm \
    -v $PWD/tables:/app/tables \
    -e "DATE=24" \
-   reynadi17/bor-extractor
+   <image name>
   ```
 
 ### Data source
 > https://www.kemkes.go.id/downloads/resources/download/Ketersediaan-Tempat-Tidur-RS-Covid19/
+
+## License
+
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
+**[MIT license](http://opensource.org/licenses/mit-license.php)**
