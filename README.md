@@ -10,6 +10,11 @@ BOR (Bed Occupancy Rate) Extractor from PDF table to csv file
   ```bash
   docker run --rm -v $PWD/tables:/app/tables <image name>
   ```
+- To run from premade image:
+  ```bash
+  docker pull reynadi17/bor-extractor
+  docker run -e "DATE=30" reynadi17/bor-extractor
+  ```
 
 - Variable that could be passed
   * DATE: Default to today date and require value in range 1 - 31
